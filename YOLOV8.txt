@@ -1,0 +1,6 @@
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="eSY6Bks0HNmuOCGSdmrn")
+project = rf.workspace("intelligent-bar-counting-m9l2o").project("steel-rods-annotation")
+dataset = project.version(22).download("yolov8")
